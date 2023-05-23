@@ -1,0 +1,17 @@
+def word(target_word, text):
+    words = text.split()
+    index = words.index(target_word)
+
+    if index < len(words) - 1:
+        return words[index + 1]
+    else:
+        return None
+
+sentence = "My name is Varun."
+target = "is"
+
+result = word(target, sentence)
+if result:
+    print(f"{result}")
+else:
+    print(f"No word found after '{target}'")

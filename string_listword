@@ -1,0 +1,17 @@
+def find_word_in_string(string, word):
+    word_list = []
+    words = string.split()  # Split the string into a list of words
+    for w in words:
+        if w == word:
+            word_list.append(w)
+    return word_list
+
+input_string = input("Enter a string: ")
+input_word = input("Enter a word to find: ")
+found_words = find_word_in_string(input_string, input_word)
+if found_words:
+    print("Occurrences of the word in the string:")
+    for word in found_words:
+        print(word)
+else:
+    print("Word not found in the string.")

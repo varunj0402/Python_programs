@@ -1,0 +1,18 @@
+def check_word(word, text):
+    if word.lower() in text.lower():
+        return True
+    else:
+        return False
+
+def find_word_position(word, text):
+    index = text.lower().find(word.lower())
+    return index
+
+sentence = "My name is Varun and today is Sunday"
+searchword = "name"
+
+result = check_word(searchword, sentence)
+if result:
+    print(f"Available")
+else:
+    print(f"Not Available")
